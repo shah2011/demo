@@ -1,0 +1,50 @@
+1- Create a new branch
+	- git branch myBranch
+
+2- Switch to your new branch
+	- git checkout myBranch
+
+3- Confirm that you are in myBranch branch
+	- git branch
+	- git branch -a
+
+4- Push your local branch to remote
+You have created a local branch, you need to push it to github
+	- git push (this will give you an error: To push the current branch and set the remote as upstream, use “git 
+	- git push -u origin myBranch
+Now, your new branch should be visible in your github
+
+Pull Request:
+
+5- Create a file in your new branch & push it to github
+	if you navigate to your repo in github, you will see myBranch with the new file
+	the new file is not in the master branch
+	
+6-  Make a pull request
+	- pull request > new pull request > set base and compare branch > create pull request > add title >add comment (optional) > create pull request
+
+We have pushed our pull, the next step is to respond to the review requests/ discuss collaborations with others, so we need to merge the pull request.
+
+7- Merge pull request
+	There are two was to merge pull reqeuest. 1, simply click the Merge pull request in your pull request in github. 2, through the command line.
+
+	checkout to master branch
+	- git checkout master
+	- git merge myBranch
+
+	You need to push up that merge up to github.
+	- git push myBranch or git push origin myBranch
+	you should be able to see the new file in your master branch
+
+Your pull request is successfully merged, you can delete it by clicking the Delete branch in your pull request in github or through the command line.
+
+8- Deleting your branch
+You can delete your Branch locally
+	- git branch -d myBranch
+	- git branch -D
+
+Deleting your branch locally will only remove it locally. You can also delete the remote tracking branch that is on github.
+	- git push origin --delete myBranch
+
+9- Merging conflicts
+
