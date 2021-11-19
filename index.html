@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   
+   <div id="ListOfBooks"></div>
+   
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+   <script>
+   const promise = axios.get('https://api.nytimes.com/svc/books/v3/lists/overview.json?api-key=4woA5M1RA8NWYHodVWAVI9qLm3pGYdm3')
+   promise.then((response) => {
+            const data = response.data;
+            console.log(promise.data)
+         document.getElementById('ListOfBooks').innerHTML = JSON.stringify(data);
+      
+        });
+
+   </script>
+
+<h1>List of New York Times Best seller</h1>
+
+</body>
+
+</body>
+</html>
